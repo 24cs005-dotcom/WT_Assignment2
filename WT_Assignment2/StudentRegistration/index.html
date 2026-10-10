@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect | Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="brand">
+        <span class="brand-icon">✦</span>
+        CAMPUS <span>CONNECT</span>
+    </a>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#registration">Admissions</a>
+        <a href="#help">Help</a>
+    </nav>
+</header>
+
+<main class="page-layout">
+
+    <section class="intro">
+        <span class="tag">YOUR FUTURE STARTS HERE</span>
+        <h1>Start Your <span>Journey</span></h1>
+        <p class="intro-text">
+            Join our campus community and take the first step
+            towards a brighter future. Register today and become
+            a part of something great!
+        </p>
+
+        <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <div>
+                <h3>Quick Registration</h3>
+                <p>Complete your registration in just a few minutes.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">♢</div>
+            <div>
+                <h3>Secure Student Data</h3>
+                <p>Your information stays protected.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">⇧</div>
+            <div>
+                <h3>Easy Document Upload</h3>
+                <p>Upload your profile photo with ease.</p>
+            </div>
+        </div>
+
+        <div class="illustration" aria-hidden="true">
+            <div class="book book-one"></div>
+            <div class="book book-two"></div>
+            <div class="book book-three"></div>
+            <div class="cap">🎓</div>
+        </div>
+
+        <p class="intro-footer">Learn today. Lead tomorrow.</p>
+    </section>
+
+    <section class="form-card" id="registration">
+        <div class="form-heading">
+            <div class="heading-icon">🎓</div>
+            <div>
+                <h2>Create Student Account</h2>
+                <p>Fill in your details to get started</p>
+            </div>
+        </div>
+
+        <div class="progress-area">
+            <div class="progress-label">
+                <span>Registration details</span>
+                <span id="progressText">0% completed</span>
+            </div>
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+
+        <form id="registrationForm" novalidate>
+
+            <div class="form-grid">
+                <div class="field">
+                    <label for="name">Student Name</label>
+                    <input id="name" name="name" type="text"
+                        placeholder="Enter your full name"
+                        autocomplete="name" required>
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="roll">Roll Number</label>
+                    <input id="roll" name="roll" type="text"
+                        placeholder="e.g. 24CS005" required>
+                    <small class="error" id="rollError"></small>
+                </div>
+
+                <div class="field full">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email"
+                        placeholder="you@example.com"
+                        autocomplete="email" required>
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="course">Course</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select your course</option>
+                        <option value="CSE">Computer Science Engineering</option>
+                        <option value="AIML">CSE (AI & ML)</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="ECE">Electronics and Communication</option>
+                        <option value="EEE">Electrical and Electronics</option>
+                        <option value="MECH">Mechanical Engineering</option>
+                    </select>
+                    <small class="error" id="courseError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="year">Academic Year</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select year</option>
+                        <option value="I Year">I Year</option>
+                        <option value="II Year">II Year</option>
+                        <option value="III Year">III Year</option>
+                        <option value="IV Year">IV Year</option>
+                    </select>
+                    <small class="error" id="yearError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-wrap">
+                        <input id="password" name="password"
+                            type="password" placeholder="Create password"
+                            autocomplete="new-password" required>
+                        <button type="button" class="toggle-password"
+                            data-target="password" aria-label="Show password">◉</button>
+                    </div>
+                    <div class="strength-track">
+                        <div id="strengthBar"></div>
+                    </div>
+                    <small id="strengthText" class="hint">
+                        Use 8+ characters, uppercase, lowercase, number and symbol.
+                    </small>
+                    <small class="error" id="passwordError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-wrap">
+                        <input id="confirmPassword" name="confirmPassword"
+                            type="password" placeholder="Repeat password"
+                            autocomplete="new-password" required>
+                        <button type="button" class="toggle-password"
+                            data-target="confirmPassword"
+                            aria-label="Show confirm password">◉</button>
+                    </div>
+                    <small class="error" id="confirmPasswordError"></small>
+                </div>
+
+                <div class="field full">
+                    <label for="photo">Profile Photo / Document</label>
+                    <label class="upload-box" for="photo" id="uploadBox">
+                        <span class="upload-icon">⇧</span>
+                        <strong id="uploadTitle">Choose a photo or document</strong>
+                        <span id="uploadDescription">
+                            JPG, PNG or PDF · Maximum 5 MB
+                        </span>
+                    </label>
+                    <input id="photo" name="photo" type="file"
+                        accept=".jpg,.jpeg,.png,.pdf"
+                        class="file-input" required>
+                    <div id="previewArea" class="preview-area"></div>
+                    <small class="error" id="photoError"></small>
+                </div>
+            </div>
+
+            <label class="terms">
+                <input type="checkbox" id="terms">
+                <span>I confirm that the details provided are correct.</span>
+            </label>
+            <small class="error" id="termsError"></small>
+
+            <button type="submit" class="submit-btn">
+                <span>Create Account</span>
+                <span>→</span>
+            </button>
+
+            <p id="successMessage" class="success" role="status"></p>
+
+            <p class="privacy">♢ Your information is used for this demo only.</p>
+        </form>
+    </section>
+</main>
+
+<footer id="help">
+    © 2026 Campus Connect · Student Registration Portal
+</footer>
+
+</body>
+</html>
