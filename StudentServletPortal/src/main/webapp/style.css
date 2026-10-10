@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+}
+
+/* =========================
+   LOGIN PAGE
+   ========================= */
+
+.login-container {
+    width: 380px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin: 100px auto;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin: 0 0 30px;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2c7be5;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a68d1;
+}
+
+/* =========================
+   STUDENT PROFILES PAGE
+   ========================= */
+
+.students-page {
+    min-height: 100vh;
+    background: #f2f5f9;
+    padding: 40px 20px;
+}
+
+.students-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 36px;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #2c7be5;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.upload-button:hover {
+    background: #1a68d1;
+}
+
+/* STUDENT CARD */
+
+.student-card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.student-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 26px;
+    text-align: left;
+}
+
+.student-info {
+    margin-bottom: 25px;
+}
+
+.student-info p {
+    margin: 12px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.student-info strong {
+    color: #2c3e50;
+}
+
+/* FILE SECTION */
+
+.files-section {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.files-section h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* FILE CARD */
+
+.file-card {
+    background: #f8fafc;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.file-name {
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* STUDENT IMAGE */
+
+.student-image {
+    display: block;
+    width: 220px;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* DOCUMENT LINK */
+
+.document-link {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #2c7be5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.document-link:hover {
+    background: #1a68d1;
+}
+
+/* NO FILES */
+
+.no-files {
+    color: #777;
+    font-style: italic;
+}
+
+.no-students {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* =========================
+   UPLOAD PAGE
+   ========================= */
+
+.upload-page {
+    min-height: 100vh;
+    padding: 50px 20px;
+    background: #f2f5f9;
+}
+
+.upload-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.upload-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.upload-container input[type="number"],
+.upload-container input[type="file"] {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.upload-container input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.upload-container button {
+    margin-top: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2c7be5;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background: #c0392b;
+}

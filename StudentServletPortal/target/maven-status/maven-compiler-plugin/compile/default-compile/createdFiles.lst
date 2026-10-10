@@ -1,0 +1,7 @@
+com\student\Student.class
+com\student\StudentFile.class
+com\student\FileServlet.class
+com\student\LoginServlet.class
+com\student\DBConnection.class
+com\student\StudentServlet.class
+com\student\UploadServlet.class
